@@ -6,7 +6,7 @@ if(isset($_POST['adduser'])){
     $firstname = $_POST['firstname'];
     $lastname =  $_POST['lastname'];
     $email =     $_POST['email'];
-    $phone  =    $_POST['email'];
+    $phone  =    $_POST['phone'];
 
     $query = "INSERT INTO users (username, firstname, lastname, email, phone) VALUES 
              ('$username', '$firstname', '$lastname', '$email', '$phone')";
@@ -47,23 +47,23 @@ if(isset($_POST['adduser'])){
             <form action="index.php" method="post" class="mb-3">
                 <div class="form-group">
                     <label for="user">Username</label>
-                    <input type="text" class="form-control" id="user" placeholder="Username">
+                    <input type="text" class="form-control" id="user" placeholder="Username" name="username">
                 </div>
                 <div class="form-group">
                     <label for="firstname">FirstName:</label>
-                    <input type="text" class="form-control" id="firstname" placeholder="First Name">
+                    <input type="text" class="form-control" id="firstname" placeholder="First Name" name="firstname">
                 </div>
                 <div class="form-group">
                     <label for="lastname">LastName</label>
-                    <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                    <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="lastname">
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                    <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input type="text" class="form-control" placeholder="Enter Phone">
+                    <input type="text" class="form-control" placeholder="Enter Phone" name="phone">
                 </div>
                 <input type="submit" name="adduser" value="Add User" class="btn btn-outline-primary btn-block">
             </form>
